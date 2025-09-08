@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دجاج الديرة - توريد الدجاج الطازج للمطاعم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+        body { font-family: 'Cairo', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #6ba9a2 0%, #0b4dab 100%); }
+        .card-shadow { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <div class="bg-white p-3 rounded-full">
+                        <svg class="w-8 h-8 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">دجاج الديرة</h1>
+                        <p class="text-orange-100">الدجاج الطازج للمطاعم المميزة</p>
+                    </div>
+                </div>
+                <div class="text-left">
+                    <p class="text-lg font-semibold">جودة عالية • توريد سريع</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">نوّرد أجود أنواع الدجاج الطازج</h2>
+            <p class="text-xl text-gray-600 mb-8">انضم إلى شبكة المطاعم المميزة التي تثق في جودة منتجاتنا</p>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="hover-lift">
+                    <div class="bg-orange-50 p-6 rounded-lg card-shadow">
+                        <div class="text-4xl mb-4">🐔</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">دجاج طازج يومياً</h3>
+                        <p class="text-gray-600">نضمن وصول الدجاج طازجاً من المزرعة إلى مطعمك</p>
+                    </div>
+                </div>
+                <div class="hover-lift">
+                    <div class="bg-green-50 p-6 rounded-lg card-shadow">
+                        <div class="text-4xl mb-4">🚚</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">توصيل سريع</h3>
+                        <p class="text-gray-600">خدمة توصيل منتظمة حسب احتياجات مطعمك</p>
+                    </div>
+                </div>
+                <div class="hover-lift">
+                    <div class="bg-blue-50 p-6 rounded-lg card-shadow">
+                        <div class="text-4xl mb-4">⭐</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">جودة مضمونة</h3>
+                        <p class="text-gray-600">معايير صحية عالية ومراقبة جودة مستمرة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">سجل مطعمك الآن</h2>
+                    <p class="text-lg text-gray-600">املأ البيانات التالية وسنتواصل معك لبدء التوريد</p>
+                </div>
+                
+                <div class="bg-white rounded-lg card-shadow p-8">
+                    <form id="restaurantForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">اسم المطعم *</label>
+                                <input type="text" id="restaurantName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                       placeholder="مثال: مطعم الأصالة">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">رقم السجل التجاري *</label>
+                                <input type="text" id="commercialNumber" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                       placeholder="1010123456">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">اسم المسؤول *</label>
+                                <input type="text" id="managerName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                       placeholder="أحمد محمد">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">رقم الجوال *</label>
+                                <input type="tel" id="phoneNumber" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                       placeholder="05xxxxxxxx">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">عنوان المطعم *</label>
+                            <textarea id="restaurantAddress" required rows="3"
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                      placeholder="المدينة، الحي، الشارع، رقم المبنى"></textarea>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">الكمية المطلوبة أسبوعياً *</label>
+                                <select id="weeklyQuantity" required 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                    <option value="">اختر الكمية</option>
+                                    <option value="10-25">10-25 دجاجة</option>
+                                    <option value="26-50">26-50 دجاجة</option>
+                                    <option value="51-100">51-100 دجاجة</option>
+                                    <option value="101-200">101-200 دجاجة</option>
+                                    <option value="200+">أكثر من 200 دجاجة</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">أيام التوريد المفضلة</label>
+                                <select id="deliveryDays" 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                                    <option value="">اختر الأيام</option>
+                                    <option value="daily">يومياً</option>
+                                    <option value="sunday-thursday">الأحد - الخميس</option>
+                                    <option value="specific">أيام محددة</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">ملاحظات إضافية</label>
+                            <textarea id="additionalNotes" rows="3"
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                      placeholder="أي متطلبات خاصة أو ملاحظات تود إضافتها..."></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" 
+                                    class="gradient-bg text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                                إرسال طلب التسجيل
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message (Hidden by default) -->
+    <div id="successMessage" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg card-shadow max-w-md mx-4 text-center">
+            <div class="text-6xl mb-4">✅</div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">تم إرسال طلبك بنجاح!</h3>
+            <p class="text-gray-600 mb-6">سنتواصل معك خلال 24 ساعة لتأكيد التفاصيل وبدء التوريد</p>
+            <button onclick="closeSuccessMessage()" 
+                    class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                حسناً
+            </button>
+        </div>
+    </div>
+
+    <!-- Contact Info -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">تواصل معنا</h3>
+                    <p class="mb-2">📞 0535325335</p>
+                    <p class="mb-2">📧 info@deerahchicken.com</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ساعات العمل</h3>
+                    <p class="mb-2">السبت - الخميس</p>
+                    <p class="mb-2">6:00 ص - 10:00 م</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">خدماتنا</h3>
+                    <p class="mb-2">توريد يومي</p>
+                    <p class="mb-2">جودة مضمونة</p>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-700">
+                <p>&copy; 2024 دجاج الديرة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('restaurantForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                restaurantName: document.getElementById('restaurantName').value,
+                commercialNumber: document.getElementById('commercialNumber').value,
+                managerName: document.getElementById('managerName').value,
+                phoneNumber: document.getElementById('phoneNumber').value,
+                restaurantAddress: document.getElementById('restaurantAddress').value,
+                weeklyQuantity: document.getElementById('weeklyQuantity').value,
+                deliveryDays: document.getElementById('deliveryDays').value,
+                additionalNotes: document.getElementById('additionalNotes').value
+            };
+            
+            // Validate required fields
+            if (!formData.restaurantName || !formData.commercialNumber || !formData.managerName || 
+                !formData.phoneNumber || !formData.restaurantAddress || !formData.weeklyQuantity) {
+                alert('يرجى ملء جميع الحقول المطلوبة');
+                return;
+            }
+            
+            // Show success message
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // Reset form
+            document.getElementById('restaurantForm').reset();
+            
+            // In a real application, you would send this data to a server
+            console.log('Restaurant registration data:', formData);
+        });
+        
+        function closeSuccessMessage() {
+            document.getElementById('successMessage').classList.add('hidden');
+        }
+        
+        // Close success message when clicking outside
+        document.getElementById('successMessage').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuccessMessage();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9719061ee0420e25',t:'MTc1NTU5OTkzMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
